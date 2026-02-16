@@ -84,7 +84,7 @@ modules:
     sources:
       - type: archive
         url: https://boostorg.jfrog.io/artifactory/main/release/1.64.0/source/boost_1_64_0.tar.bz2
-        sha256: 7bcc5caace97baa948931d712ea5f37038dbb1c5d89b43ad4def4ed7cb683332
+        sha256: 1c162b579a423fa6876c6c5bc16d39ab4bc05e28898977a0a6af345f523f6357
 
   - name: pokerth
     buildsystem: qmake
