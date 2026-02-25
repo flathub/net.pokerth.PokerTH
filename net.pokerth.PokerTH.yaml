@@ -1,6 +1,6 @@
 app-id: net.pokerth.PokerTH
 runtime: org.kde.Platform
-runtime-version: '5.15-23.08'
+runtime-version: 5.15-23.08
 sdk: org.kde.Sdk
 command: pokerth
 rename-icon: pokerth
@@ -50,9 +50,9 @@ modules:
   - name: gsasl
     buildsystem: autotools
     sources:
-    - type: archive
-      url: https://ftp.gnu.org/gnu/gsasl/gsasl-1.8.1.tar.gz
-      sha256: 4dda162a511976bfef14ad1fecd7733719dfd9c361b5d09dc8414ea9d472d8d2
+      - type: archive
+        url: https://ftp.gnu.org/gnu/gsasl/gsasl-1.8.1.tar.gz
+        sha256: 4dda162a511976bfef14ad1fecd7733719dfd9c361b5d09dc8414ea9d472d8d2
     cleanup:
       - /bin
       - /share/info
@@ -103,8 +103,8 @@ modules:
     sources:
       - type: git
         url: https://github.com/pokerth/pokerth.git
-        tag: v1.1.2
-        commit: 2ca2e941a616c200e3ec81243ad0ed4243b3030e
+        tag: v2.0.4
+        commit: c6442e3967e27bcba91b75edad9e14e647e1a1a2
         x-checker-data:
           type: git
           tag-pattern: ^(v[\d.]+)$
