@@ -10,8 +10,6 @@ finish-args:
   - --socket=wayland
   - --socket=pulseaudio
   - --device=dri
-  - --filesystem=xdg-config/pokerth:create
-  - --filesystem=xdg-data/pokerth:create
 cleanup:
   - /include
   - /lib/cmake
