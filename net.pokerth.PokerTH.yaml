@@ -6,11 +6,12 @@ command: pokerth_client
 finish-args:
   - --share=network
   - --share=ipc
-  - --socket=x11
+  - --socket=fallback-x11
   - --socket=wayland
   - --socket=pulseaudio
   - --device=dri
-  - --filesystem=home
+  - --filesystem=xdg-config/pokerth:create
+  - --filesystem=xdg-data/pokerth:create
 cleanup:
   - /include
   - /lib/cmake
