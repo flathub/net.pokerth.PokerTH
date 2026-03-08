@@ -10,6 +10,7 @@ finish-args:
   - --socket=wayland
   - --socket=pulseaudio
   - --device=dri
+  - --filesystem=xdg-download:ro
 cleanup:
   - /include
   - /lib/cmake
