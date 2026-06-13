@@ -77,8 +77,10 @@ modules:
         path: pokerth.appdata.xml
     build-commands:
       - rm -f cmake/FindBoost.cmake
-      - cmake -B _build -G Ninja -DCMAKE_BUILD_TYPE=Release -DCMAKE_INSTALL_PREFIX=/app -DCMAKE_POLICY_DEFAULT_CMP0144=NEW -DBOOST_ROOT=/app
-      - cmake --build _build --target pokerth_client pokerth_lib pokerth_db pokerth_protocol zlib_compress -j$FLATPAK_BUILDER_N_JOBS
+      - cmake -B _build -G Ninja -DCMAKE_BUILD_TYPE=Release -DCMAKE_INSTALL_PREFIX=/app
+        -DCMAKE_POLICY_DEFAULT_CMP0144=NEW -DBOOST_ROOT=/app
+      - cmake --build _build --target pokerth_client pokerth_lib pokerth_db pokerth_protocol
+        zlib_compress -j$FLATPAK_BUILDER_N_JOBS
       - cmake --install _build --component pokerth_client
     post-install:
       - install -Dm644 pokerth.png /app/share/icons/hicolor/256x256/apps/net.pokerth.PokerTH.png
