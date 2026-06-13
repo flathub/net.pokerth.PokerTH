@@ -68,8 +68,8 @@ modules:
     sources:
       - type: git
         url: https://github.com/pokerth/pokerth.git
-        tag: v2.0.7
-        commit: d75737498cff9fc923a855fd3df1558026dde77b
+        tag: v2.0.8
+        commit: 8a38a03e6beb87d7e41896359651966ce44edeb7
         x-checker-data:
           type: git
           tag-pattern: ^(v[\d.]+)$
@@ -77,8 +77,10 @@ modules:
         path: pokerth.appdata.xml
     build-commands:
       - rm -f cmake/FindBoost.cmake
-      - cmake -B _build -G Ninja -DCMAKE_BUILD_TYPE=Release -DCMAKE_INSTALL_PREFIX=/app -DCMAKE_POLICY_DEFAULT_CMP0144=NEW -DBOOST_ROOT=/app
-      - cmake --build _build --target pokerth_client pokerth_lib pokerth_db pokerth_protocol zlib_compress -j$FLATPAK_BUILDER_N_JOBS
+      - cmake -B _build -G Ninja -DCMAKE_BUILD_TYPE=Release -DCMAKE_INSTALL_PREFIX=/app
+        -DCMAKE_POLICY_DEFAULT_CMP0144=NEW -DBOOST_ROOT=/app
+      - cmake --build _build --target pokerth_client pokerth_lib pokerth_db pokerth_protocol
+        zlib_compress -j$FLATPAK_BUILDER_N_JOBS
       - cmake --install _build --component pokerth_client
     post-install:
       - install -Dm644 pokerth.png /app/share/icons/hicolor/256x256/apps/net.pokerth.PokerTH.png
