@@ -68,8 +68,8 @@ modules:
     sources:
       - type: git
         url: https://github.com/pokerth/pokerth.git
-        tag: v2.0.8
-        commit: 8a38a03e6beb87d7e41896359651966ce44edeb7
+        tag: v2.1.0
+        commit: 97fef6f7b9beb3cc4b39ee9d77b732aff70ed88d
         x-checker-data:
           type: git
           tag-pattern: ^(v[\d.]+)$
@@ -77,15 +77,17 @@ modules:
         path: pokerth.appdata.xml
     build-commands:
       - rm -f cmake/FindBoost.cmake
-      - cmake -B _build -G Ninja -DCMAKE_BUILD_TYPE=Release -DCMAKE_INSTALL_PREFIX=/app
-        -DCMAKE_POLICY_DEFAULT_CMP0144=NEW -DBOOST_ROOT=/app
-      - cmake --build _build --target pokerth_client pokerth_lib pokerth_db pokerth_protocol
-        zlib_compress -j$FLATPAK_BUILDER_N_JOBS
+      - cmake -B _build -G Ninja -DCMAKE_BUILD_TYPE=Release -DCMAKE_INSTALL_PREFIX=/app -DCMAKE_POLICY_DEFAULT_CMP0144=NEW -DBOOST_ROOT=/app
+      - cmake --build _build --target pokerth_client pokerth_qml-client pokerth_lib pokerth_db pokerth_protocol zlib_compress -j$FLATPAK_BUILDER_N_JOBS
       - cmake --install _build --component pokerth_client
+      - cmake --install _build --component Unspecified
     post-install:
       - install -Dm644 pokerth.png /app/share/icons/hicolor/256x256/apps/net.pokerth.PokerTH.png
       - mv /app/share/applications/pokerth.desktop /app/share/applications/net.pokerth.PokerTH.desktop
       - sed -i 's/^Exec=.*$/Exec=pokerth_client/' /app/share/applications/net.pokerth.PokerTH.desktop
       - sed -i 's/^Icon=pokerth$/Icon=net.pokerth.PokerTH/' /app/share/applications/net.pokerth.PokerTH.desktop
+      - mv /app/share/applications/pokerth_qml.desktop /app/share/applications/net.pokerth.PokerTH.Qml.desktop
+      - sed -i 's/^Exec=.*$/Exec=pokerth_qml-client/' /app/share/applications/net.pokerth.PokerTH.Qml.desktop
+      - sed -i 's/^Icon=pokerth$/Icon=net.pokerth.PokerTH/' /app/share/applications/net.pokerth.PokerTH.Qml.desktop
       - cp /app/share/fonts/type1/gsfonts/n019003l.pfb /app/share/pokerth/data/fonts/n019003l.pfb
       - install -Dm644 pokerth.appdata.xml /app/share/metainfo/net.pokerth.PokerTH.metainfo.xml
