@@ -27,7 +27,9 @@ You can play singleplayer games with up to 9 computer-opponents or meet other Po
  <update_contact>webmaster@pokerth.net</update_contact>
  <launchable type="desktop-id">net.pokerth.PokerTH.desktop</launchable>
  <launchable type="desktop-id">net.pokerth.PokerTH.Qml.desktop</launchable>
- <releases>  <release version="2.1.1" date="2026-07-06" type="stable">
+ <releases>  <release version="2.1.2" date="2026-07-08" type="stable">
+   <url>https://github.com/pokerth/pokerth/releases/tag/v2.1.2</url>
+  </release>  <release version="2.1.1" date="2026-07-06" type="stable">
    <url>https://github.com/pokerth/pokerth/releases/tag/v2.1.1</url>
   </release>  <release version="2.1.0" date="2026-07-03" type="stable">
    <url>https://github.com/pokerth/pokerth/releases/tag/v2.1.0</url>
