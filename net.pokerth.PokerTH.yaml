@@ -11,6 +11,12 @@ finish-args:
   - --socket=pulseaudio
   - --device=dri
   - --filesystem=xdg-download:ro
+  # QML from the .qrc has no per-file timestamp, so Qt validates its compiled
+  # disk cache against the executable's mtime -- which ostree normalizes on
+  # checkout. After an update the stale .qmlc of unchanged file names is reused
+  # (e.g. 2.1.1's config/StaticData.qml in the 2.1.2 client: missing
+  # placementColors/heatColors -> white bars, pie chart not painted at all).
+  - --env=QML_DISABLE_DISK_CACHE=1
 cleanup:
   - /include
   - /lib/cmake
