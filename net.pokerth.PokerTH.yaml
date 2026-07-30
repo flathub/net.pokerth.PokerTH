@@ -74,8 +74,8 @@ modules:
     sources:
       - type: git
         url: https://github.com/pokerth/pokerth.git
-        tag: v2.1.4
-        commit: 2df6db335259ff855c2a4cc7bfebae3849c7745f
+        tag: v2.1.5
+        commit: cfb951a553d7d2399935d86d43c0ba9058247980
         x-checker-data:
           type: git
           tag-pattern: ^(v[\d.]+)$
@@ -89,8 +89,10 @@ modules:
       # the QML client crashes at runtime ("module QtQuick.VectorImage is not
       # installed"). Force the Image/QtSvg raster fallback for the Flatpak build.
       - sed -i '/set(SVGICON_VARIANT/s/SvgIconVector/SvgIconImage/' src/gui/qt6-qml/CMakeLists.txt
-      - cmake -B _build -G Ninja -DCMAKE_BUILD_TYPE=Release -DCMAKE_INSTALL_PREFIX=/app -DCMAKE_POLICY_DEFAULT_CMP0144=NEW -DBOOST_ROOT=/app
-      - cmake --build _build --target pokerth_client pokerth_qml-client pokerth_lib pokerth_db pokerth_protocol zlib_compress -j$FLATPAK_BUILDER_N_JOBS
+      - cmake -B _build -G Ninja -DCMAKE_BUILD_TYPE=Release -DCMAKE_INSTALL_PREFIX=/app
+        -DCMAKE_POLICY_DEFAULT_CMP0144=NEW -DBOOST_ROOT=/app
+      - cmake --build _build --target pokerth_client pokerth_qml-client pokerth_lib
+        pokerth_db pokerth_protocol zlib_compress -j$FLATPAK_BUILDER_N_JOBS
       - cmake --install _build --component pokerth_client
       - cmake --install _build --component Unspecified
     post-install:
