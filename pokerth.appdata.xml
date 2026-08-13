@@ -14,43 +14,47 @@ You can play singleplayer games with up to 9 computer-opponents or meet other Po
  <screenshots>
   <screenshot type="default">
    <caption>Poker table with the default style</caption>
-   <image width="800" height="500">https://raw.githubusercontent.com/pokerth/pokerth/v2.1.6/data/gfx/qml/table/default/preview.png</image>
+   <image width="800" height="500">https://raw.githubusercontent.com/pokerth/pokerth/v2.1.7/data/gfx/qml/table/default/preview.png</image>
   </screenshot>
   <screenshot>
    <caption>Poker table with the Green Casino style</caption>
-   <image width="800" height="500">https://raw.githubusercontent.com/pokerth/pokerth/v2.1.6/data/gfx/qml/table/greencasino/preview.png</image>
+   <image width="800" height="500">https://raw.githubusercontent.com/pokerth/pokerth/v2.1.7/data/gfx/qml/table/greencasino/preview.png</image>
   </screenshot>
   <screenshot>
    <caption>Poker table with the Wanted style</caption>
-   <image width="800" height="500">https://raw.githubusercontent.com/pokerth/pokerth/v2.1.6/data/gfx/qml/table/wanted/preview.png</image>
+   <image width="800" height="500">https://raw.githubusercontent.com/pokerth/pokerth/v2.1.7/data/gfx/qml/table/wanted/preview.png</image>
   </screenshot>
   <screenshot>
    <caption>Poker table with the Matrix style</caption>
-   <image width="800" height="500">https://raw.githubusercontent.com/pokerth/pokerth/v2.1.6/data/gfx/qml/table/matrix/preview.png</image>
+   <image width="800" height="500">https://raw.githubusercontent.com/pokerth/pokerth/v2.1.7/data/gfx/qml/table/matrix/preview.png</image>
   </screenshot>
   <screenshot>
    <caption>Poker table with the Star Trek style</caption>
-   <image width="800" height="500">https://raw.githubusercontent.com/pokerth/pokerth/v2.1.6/data/gfx/qml/table/star_trek/preview.png</image>
+   <image width="800" height="500">https://raw.githubusercontent.com/pokerth/pokerth/v2.1.7/data/gfx/qml/table/star_trek/preview.png</image>
   </screenshot>
   <screenshot>
    <caption>Poker table with the Discworld style</caption>
-   <image width="800" height="500">https://raw.githubusercontent.com/pokerth/pokerth/v2.1.6/data/gfx/qml/table/discworld/preview.png</image>
+   <image width="800" height="500">https://raw.githubusercontent.com/pokerth/pokerth/v2.1.7/data/gfx/qml/table/discworld/preview.png</image>
   </screenshot>
   <screenshot>
    <caption>Poker table with the Saloon style</caption>
-   <image width="800" height="500">https://raw.githubusercontent.com/pokerth/pokerth/v2.1.6/data/gfx/qml/table/saloon/preview.png</image>
+   <image width="800" height="500">https://raw.githubusercontent.com/pokerth/pokerth/v2.1.7/data/gfx/qml/table/saloon/preview.png</image>
   </screenshot>
   <screenshot>
    <caption>Poker table with the Pirates style</caption>
-   <image width="800" height="500">https://raw.githubusercontent.com/pokerth/pokerth/v2.1.6/data/gfx/qml/table/pirates/preview.png</image>
+   <image width="800" height="500">https://raw.githubusercontent.com/pokerth/pokerth/v2.1.7/data/gfx/qml/table/pirates/preview.png</image>
   </screenshot>
   <screenshot>
    <caption>Poker table with the Mile High Club style</caption>
-   <image width="800" height="500">https://raw.githubusercontent.com/pokerth/pokerth/v2.1.6/data/gfx/qml/table/mile_high_club/preview.png</image>
+   <image width="800" height="500">https://raw.githubusercontent.com/pokerth/pokerth/v2.1.7/data/gfx/qml/table/mile_high_club/preview.png</image>
   </screenshot>
   <screenshot>
    <caption>Poker table with the Terminus Hotel 2 style</caption>
-   <image width="800" height="500">https://raw.githubusercontent.com/pokerth/pokerth/v2.1.6/data/gfx/qml/table/terminus_hotel_2/preview.png</image>
+   <image width="800" height="500">https://raw.githubusercontent.com/pokerth/pokerth/v2.1.7/data/gfx/qml/table/terminus_hotel_2/preview.png</image>
+  </screenshot>
+  <screenshot>
+   <caption>Poker table with the BBC Anthem style</caption>
+   <image width="800" height="500">https://raw.githubusercontent.com/pokerth/pokerth/v2.1.7/data/gfx/qml/table/bbc_anthem/preview.png</image>
   </screenshot>
  </screenshots>
  <url type="homepage">https://www.pokerth.net</url>
@@ -64,7 +68,9 @@ You can play singleplayer games with up to 9 computer-opponents or meet other Po
  <update_contact>webmaster@pokerth.net</update_contact>
  <launchable type="desktop-id">net.pokerth.PokerTH.desktop</launchable>
  <launchable type="desktop-id">net.pokerth.PokerTH.Qml.desktop</launchable>
- <releases>  <release version="2.1.6" date="2026-08-05" type="stable">
+ <releases>  <release version="2.1.7" date="2026-08-13" type="stable">
+   <url>https://github.com/pokerth/pokerth/releases/tag/v2.1.7</url>
+  </release>  <release version="2.1.6" date="2026-08-05" type="stable">
    <url>https://github.com/pokerth/pokerth/releases/tag/v2.1.6</url>
   </release>  <release version="2.1.5" date="2026-07-30" type="stable">
    <url>https://github.com/pokerth/pokerth/releases/tag/v2.1.5</url>
