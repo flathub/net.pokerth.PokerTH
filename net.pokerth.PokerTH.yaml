@@ -74,8 +74,8 @@ modules:
     sources:
       - type: git
         url: https://github.com/pokerth/pokerth.git
-        tag: v2.1.9
-        commit: 7bbb73002d9dc32f99829e68b5791644c3101263
+        tag: v2.1.10
+        commit: 0a7dceb575d8b9dfcbd7c46ec7a90482cbdb40ba
         x-checker-data:
           type: git
           tag-pattern: ^(v[\d.]+)$
